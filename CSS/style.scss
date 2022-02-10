@@ -58,40 +58,48 @@ a {
 
 a:hover {
   opacity: 0.6;
+  filter: drop-shadow(0px 0px 10px #50dcfd);
 }
 
 // HEADER
 
 header {
-  width: 100%;
-  padding: 16px 40px;
-  background-color: #000;
   position: fixed;
+  width: 100%;
+  justify-content: center;
+  padding: 16px 0;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 99;
-  align-items: center;
+  border-bottom: 1px solid #fff; // 확인용
 
-  h1 {
-    width: 92px;
-  }
+  .wrapper {
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
 
-  nav {
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    ul {
-      display: flex;
+    h1 {
+      width: 92px;
+    }
 
-      li {
-        margin-left: 40px;
+    nav {
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+
+      ul {
+        li {
+          margin-left: 40px;
+        }
       }
     }
   }
 
   .badges {
-    width: 12.5rem;
     position: absolute;
     top: 80px;
     right: 100px;
+    width: 12.5rem;
+    display: none;
 
     .badge {
       border-radius: 10px;
@@ -105,14 +113,20 @@ header {
 
 // MAIN
 main {
-  padding-top: 90px;
+  // padding-top: 90px;
 
-  section {
-    // height: 80vh;
+  .main_kv {
+    position: relative;
+
+    video {
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
   }
 
   .about {
-    padding-top: 80px;
+    padding-top: 1500px;
 
     h3 {
       margin-top: 4rem;
