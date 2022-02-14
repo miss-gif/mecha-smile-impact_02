@@ -38,7 +38,7 @@ html a:hover {
 
 .inner {
   position: relative;
-  width: 70%;
+  width: 65%;
   margin: 0 auto;
 }
 
@@ -59,11 +59,6 @@ html a:hover {
 
 .center {
   text-align: center;
-}
-
-.swiper {
-  width: 80%;
-  height: 600px;
 }
 
 header {
@@ -180,16 +175,20 @@ main .about ul li:hover {
 }
 
 main .about ul li img {
-  -webkit-filter: drop-shadow(0px 0px 20px #50dcfd);
-          filter: drop-shadow(0px 0px 20px #50dcfd);
+  -webkit-filter: drop-shadow(0px 0px 10px #50dcfd);
+          filter: drop-shadow(0px 0px 10px #50dcfd);
 }
 
 main .about ul li .text {
   position: absolute;
   width: 100%;
-  margin-top: -80px;
+  margin-top: -50px;
   font-weight: 400;
   text-align: center;
+}
+
+main .about ul li .text p {
+  margin: auto 0;
 }
 
 main .about ul li .text time {
@@ -198,14 +197,14 @@ main .about ul li .text time {
   font-size: 14px;
 }
 
-main .about .card1 {
+main .about .card {
   position: relative;
   -webkit-perspective: 600px;
           perspective: 600px;
   display: block;
 }
 
-main .about .card1 .front {
+main .about .card .front {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform: rotateY(0deg);
@@ -216,7 +215,7 @@ main .about .card1 .front {
           backface-visibility: hidden;
 }
 
-main .about .card1 .back {
+main .about .card .back {
   position: absolute;
   top: 0;
   left: 0;
@@ -234,21 +233,10 @@ main .about .card1 .back {
           backface-visibility: hidden;
 }
 
-main .about .card1 .back img {
+main .about .card .back img {
   position: absolute;
   height: 80%;
   border-radius: 5px;
-}
-
-main .about .card1:hover .front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-main .about .card1:hover .back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-  z-index: 1;
 }
 
 main .movie {
@@ -256,7 +244,6 @@ main .movie {
 }
 
 main .movie figure {
-  margin-top: 4rem;
   border: 1px solid #2ef4f4;
 }
 
@@ -264,30 +251,54 @@ main .live {
   padding: 90px 0;
 }
 
-main .live .live_box {
-  margin-top: 4rem;
-}
-
 main .exhibition {
   padding: 90px 0;
 }
 
-main .exhibition dl {
+main .exhibition .exhibition_contents {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  margin: 40px 0 0 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: relative;
 }
 
-main .exhibition dl dt {
-  width: 18%;
-  margin: 0 0 10px 0;
+main .exhibition .exhibition_contents .instructions {
+  width: 60%;
 }
 
-main .exhibition dl dd {
+main .exhibition .exhibition_contents .instructions .table {
+  margin: 10px;
+}
+
+main .exhibition .exhibition_contents .instructions .table .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+main .exhibition .exhibition_contents .instructions .table .column div:nth-child(1) {
+  border: 2px solid #2ef4f43a;
+  border-radius: 10px 0 10px 0;
+  width: 80px;
+  text-align: center;
+  padding: 8px 5px;
+}
+
+main .exhibition .exhibition_contents .instructions .table .column div:nth-child(2) {
   width: 80%;
-  line-height: 48px;
+  margin-left: 10px;
+}
+
+main .exhibition .exhibition_contents .maps {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
 }
 
 main .exhibition ul {
@@ -298,7 +309,7 @@ main .exhibition ul {
 }
 
 main .exhibition ul li {
-  width: calc(96% / 2);
+  width: calc(96% / 3);
 }
 
 main .exhibition iframe {
