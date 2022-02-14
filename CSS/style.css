@@ -1,20 +1,31 @@
-body {
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
   font-size: 16px;
   font-family: "Noto Serif KR", serif;
   font-weight: 400;
   background-color: #000;
   color: #fff;
-  scroll-behavior: smooth;
 }
 
-p {
-  line-height: 1.75em;
-  margin-top: 24px;
+html p {
+  line-height: 1.6em;
+  margin: 2em;
 }
 
-img {
+html img {
   width: 100%;
-  height: auto;
+}
+
+html a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html a:hover {
+  opacity: 0.6;
 }
 
 .flex {
@@ -26,10 +37,9 @@ img {
 }
 
 .inner {
-  width: 90%;
-  max-width: 980px;
-  margin: 0 auto;
   position: relative;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .youtube {
@@ -51,15 +61,9 @@ img {
   text-align: center;
 }
 
-a {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.6;
-  -webkit-filter: drop-shadow(0px 0px 10px #50dcfd);
-          filter: drop-shadow(0px 0px 10px #50dcfd);
+.swiper {
+  width: 80%;
+  height: 600px;
 }
 
 header {
@@ -71,11 +75,10 @@ header {
   padding: 16px 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 99;
-  border-bottom: 1px solid #fff;
 }
 
 header .wrapper {
-  width: 75%;
+  width: 70%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -98,40 +101,51 @@ header .wrapper nav ul li {
   margin-left: 40px;
 }
 
+header .wrapper nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .wrapper nav ul li a span {
+  padding-top: 8px;
+  font-size: 12px;
+  text-align: center;
+  color: #50dcfd;
+}
+
 header .badges {
   position: absolute;
-  top: 80px;
-  right: 100px;
+  top: 100px;
+  right: 10px;
   width: 12.5rem;
-  display: none;
 }
 
 header .badges .badge {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 12px;
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
-main .main_kv {
-  position: relative;
+  -webkit-box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
+          box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
 }
 
 main .main_kv video {
   width: 100%;
-  position: absolute;
   top: 0;
 }
 
 main .about {
-  padding-top: 1500px;
+  padding: 90px 0;
 }
 
 main .about h3 {
   margin-top: 4rem;
   font-size: 18px;
+  opacity: 1;
 }
 
 main .about ul {
@@ -139,11 +153,26 @@ main .about ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 1;
 }
 
 main .about ul li {
   width: 12.25rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
 }
 
 main .about ul li:hover {
@@ -156,12 +185,14 @@ main .about ul li img {
 }
 
 main .about ul li .text {
-  margin-top: -80px;
   position: absolute;
+  width: 100%;
+  margin-top: -80px;
   font-weight: 400;
+  text-align: center;
 }
 
-main .about ul li div time {
+main .about ul li .text time {
   line-height: 2em;
   color: #2ef4f4;
   font-size: 14px;
@@ -206,6 +237,7 @@ main .about .card1 .back {
 main .about .card1 .back img {
   position: absolute;
   height: 80%;
+  border-radius: 5px;
 }
 
 main .about .card1:hover .front {
@@ -220,7 +252,7 @@ main .about .card1:hover .back {
 }
 
 main .movie {
-  padding-top: 100px;
+  padding: 90px 0;
 }
 
 main .movie figure {
@@ -229,7 +261,7 @@ main .movie figure {
 }
 
 main .live {
-  padding-top: 80px;
+  padding: 90px 0;
 }
 
 main .live .live_box {
@@ -237,7 +269,7 @@ main .live .live_box {
 }
 
 main .exhibition {
-  padding-top: 80px;
+  padding: 90px 0;
 }
 
 main .exhibition dl {
@@ -289,7 +321,7 @@ main .exhibition .note h3 {
 }
 
 main .sales {
-  padding-top: 80px;
+  padding: 90px 0;
 }
 
 main .sales dl {
@@ -329,7 +361,7 @@ main .sales .otherItem {
 }
 
 main .gallery {
-  padding-top: 90px;
+  padding: 90px 0;
 }
 
 main .gallery a img {
@@ -338,7 +370,7 @@ main .gallery a img {
 }
 
 main .othersite {
-  padding-top: 90px;
+  padding: 90px 0;
 }
 
 main .othersite ul {
@@ -353,8 +385,11 @@ main .othersite ul li {
 }
 
 footer {
-  font-size: 14px;
-  padding-top: 60px;
-  padding-bottom: 80px;
+  font-size: 0.875em;
+  padding: 1em;
+}
+
+footer p {
+  margin: 0px;
 }
 /*# sourceMappingURL=style.css.map */
