@@ -61,6 +61,10 @@ html a:hover {
   text-align: center;
 }
 
+.slider div img {
+  width: calc(96% / 3);
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -351,17 +355,6 @@ main .sales dl dt {
 main .sales dl dd {
   width: 80%;
   line-height: 48px;
-}
-
-main .sales ul {
-  padding-top: 3rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .sales ul li {
-  width: calc(96% / 3);
 }
 
 main .sales .otherItem {
