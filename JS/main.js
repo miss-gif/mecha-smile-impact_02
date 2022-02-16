@@ -1,31 +1,55 @@
-// bxSlider
-$(document).ready(function () {
-  $(".slider").bxSlider({
-    mode: "horizontal",
-    // mode: "vertical",
-    minSlides: 4,
-    maxSlides: 5,
-  });
+new Swiper(".about .swiper-container", {
+  // direction: 'horizontal', // 수평 슬라이드
+  autoplay: true, // 자동 재생 여부
+  loop: true, // 반복 재생 여부
+  spaceBetween: 30, // 슬라이드 사이 여백
+  slidesPerView: 4, // 한 번에 보여줄 슬라이드 개수
+  // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  navigation: {
+    // 슬라이드 이전/다음 버튼 사용 여부
+    prevEl: ".about .swiper-prev", // 이전 버튼 선택자
+    nextEl: ".about .swiper-next", // 다음 버튼 선택자
+  },
 });
 
-// $('.bxSlider').bxSlider({
-//   옵션 입력
-//   많이 사용하는 예)
-//   명칭 | 기본값 | 설명
-//   mode: 'horizontal' | (horizontal, vertical, fade) | 슬라이드 방향
-//   auto: false | (false, true) | 자동 슬라이드
-//   autoHover: false | (false, true) | 마우스 hover시 슬라이드 정지
-//   controls: false | (false, true) | prev/next 버튼 노출 여부
-//   speed: 1000 | 슬라이드 속도
-//   randomStart: false | (false, true) | 램덤 스타트
-//   infiniteLoop: true | (false, true) | true면 마지막에서 첫번째로 전환 그 반대도 동일, 무한루프
-//   pager: true | (false, true) | 블릿버튼
-//   minSlides: 1 | 최소 슬라이드 노출 개수
-//   maxSlides: 5 | 최대 슬라이드 노출 개수
-//   autoControls: false | (false, true) | 시작, 정지버튼 노출 여부
-// });
+new Swiper(".live .swiper-container", {
+  // direction: 'horizontal', // 수평 슬라이드
+  autoplay: true, // 자동 재생 여부
+  loop: true, // 반복 재생 여부
+  spaceBetween: 30, // 슬라이드 사이 여백
+  slidesPerView: 1, // 한 번에 보여줄 슬라이드 개수
+  // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  navigation: {
+    // 슬라이드 이전/다음 버튼 사용 여부
+    prevEl: ".live .swiper-prev", // 이전 버튼 선택자
+    nextEl: ".live .swiper-next", // 다음 버튼 선택자
+  },
+});
 
-// 또는 변수를 사용하여,
-// var 변수 = $('.bxSlider').bxSlider({
-//   옵션 입력
-// });
+new Swiper(".exhibition .swiper-container", {
+  // direction: 'horizontal', // 수평 슬라이드
+  autoplay: true, // 자동 재생 여부
+  loop: true, // 반복 재생 여부
+  spaceBetween: 30, // 슬라이드 사이 여백
+  slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
+  // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  navigation: {
+    // 슬라이드 이전/다음 버튼 사용 여부
+    prevEl: ".exhibition .swiper-prev", // 이전 버튼 선택자
+    nextEl: ".exhibition .swiper-next", // 다음 버튼 선택자
+  },
+});
+
+new Swiper(".sales .swiper-container", {
+  // direction: 'horizontal', // 수평 슬라이드
+  autoplay: true, // 자동 재생 여부
+  loop: true, // 반복 재생 여부
+  spaceBetween: 30, // 슬라이드 사이 여백
+  slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
+  // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  navigation: {
+    // 슬라이드 이전/다음 버튼 사용 여부
+    prevEl: ".sales .swiper-prev", // 이전 버튼 선택자
+    nextEl: ".sales .swiper-next", // 다음 버튼 선택자
+  },
+});

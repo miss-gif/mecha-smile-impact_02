@@ -62,18 +62,7 @@ html {
   text-align: center;
 }
 
-.slider {
-  // padding-top: 3rem;
-  // justify-content: space-between;
-
-  div {
-    // width: calc(96% / 3);
-    img {
-      width: calc(96% / 3);
-    }
-  }
-}
-
+// 배경이미지
 // main {
 //   .background__color__about {
 //     background-image: url("https://www.wallpapertip.com/wmimgs/4-45700_data-src-space-wallpaper-4k.jpg");
@@ -128,6 +117,14 @@ html {
 //     // z-index: 1;
 //   }
 // }
+
+// swiper
+.swiper-container {
+  width: 100%;
+  background-color: #156;
+  overflow: hidden;
+  margin-top: 2em;
+}
 
 // HEADER
 

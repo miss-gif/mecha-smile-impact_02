@@ -61,8 +61,11 @@ html a:hover {
   text-align: center;
 }
 
-.slider div img {
-  width: calc(96% / 3);
+.swiper-container {
+  width: 100%;
+  background-color: #156;
+  overflow: hidden;
+  margin-top: 2em;
 }
 
 header {
