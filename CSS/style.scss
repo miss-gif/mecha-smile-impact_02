@@ -124,10 +124,39 @@ html {
   width: 100%;
   overflow: hidden;
   margin-top: 2em;
+
   img:hover {
     opacity: 0.6;
     cursor: pointer;
   }
+}
+
+.swiper-prev,
+.swiper-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  // bottom: 500px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.swiper-prev {
+  left: -50px;
+}
+
+.swiper-next {
+  right: -50px;
+}
+
+.swiper-prev:hover,
+.swiper-next:hover {
+  // background-color: #fff;
+  color: #333;
 }
 
 // HEADER
@@ -187,6 +216,57 @@ header {
       margin-bottom: 12px;
       box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
     }
+  }
+}
+
+.포트폴리오_공지사항 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #333;
+  border-right: 50px solid transparent;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.포트폴리오_공지사항:hover {
+  border-bottom: 80px solid #222;
+  border-right: 80px solid transparent;
+  transition: 0.5s;
+}
+
+.포트폴리오_공지사항_텍스트 {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 1em;
+
+  p {
+    font-size: 0.95em;
+    margin: 0;
+  }
+
+  a {
+    font-size: 0.95em;
+    line-height: 1.6em;
+  }
+
+  .포트폴리오_공지사항_닫기버튼 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #df5b00;
+    cursor: pointer;
+  }
+  .포트폴리오_공지사항_닫기버튼:hover {
+    opacity: 0.6;
+    transition: 0.25s;
   }
 }
 
@@ -276,14 +356,15 @@ main {
       }
     }
 
-    // .card:hover .front {
-    //   transform: rotateY(180deg);
-    // }
+    /// 카드 뒤집어 지는 옵션
+    .card:hover .front {
+      transform: rotateY(180deg);
+    }
 
-    // .card:hover .back {
-    //   transform: rotateY(0deg);
-    //   z-index: 1;
-    // }
+    .card:hover .back {
+      transform: rotateY(0deg);
+      z-index: 1;
+    }
   }
 
   .movie {
@@ -349,6 +430,7 @@ main {
               font-size: 14px;
               font-family: Arial, Helvetica, sans-serif;
             }
+
             .details_btn:before,
             .details_btn:after {
               position: absolute;
@@ -361,6 +443,7 @@ main {
               height: 24px;
               width: 24px;
             }
+
             .details_btn:before {
               border-color: #df5b00;
               border-right-width: 2px;
@@ -368,6 +451,7 @@ main {
               right: -5px;
               top: -5px;
             }
+
             .details_btn:after {
               border-bottom-width: 2px;
               border-color: #df5b00;
@@ -375,16 +459,49 @@ main {
               bottom: -5px;
               left: -5px;
             }
+
             .details_btn:hover,
             .details_btn.hover {
               background-color: #df5b00;
             }
+
             .details_btn:hover:before,
             .details_btn.hover:before,
             .details_btn:hover:after,
             .details_btn.hover:after {
               height: 100%;
               width: 100%;
+            }
+          }
+
+          .전시전_주의사항 {
+            display: none;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            background-color: rgba(34, 34, 34, 0.99);
+            z-index: 10;
+            border: 1px solid #2ef4f4;
+            box-sizing: border-box;
+            padding: 3em 1em 1em 1em;
+
+            h3 {
+              font-size: 30px;
+              font-weight: 900;
+              padding-bottom: 30px;
+            }
+            .전시전_주의사항_닫기버튼 {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              color: #df5b00;
+              cursor: pointer;
+            }
+            .전시전_주의사항_닫기버튼:hover {
+              opacity: 0.6;
+              transition: 0.25s;
             }
           }
         }
@@ -411,24 +528,11 @@ main {
     iframe {
       margin-top: 4rem;
     }
-
-    .note {
-      margin-top: 4rem;
-      width: 100%;
-      border: 1px solid #2ef4f4;
-      box-sizing: border-box;
-      padding: 40px;
-
-      h3 {
-        font-size: 30px;
-        font-weight: 900;
-        padding-bottom: 30px;
-      }
-    }
   }
 
   .sales {
     padding: 90px 0;
+
     .instructions {
       width: 100%;
 

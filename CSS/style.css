@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -74,6 +75,39 @@ html a:hover {
   cursor: pointer;
 }
 
+.swiper-prev,
+.swiper-next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.swiper-prev {
+  left: -50px;
+}
+
+.swiper-next {
+  right: -50px;
+}
+
+.swiper-prev:hover,
+.swiper-next:hover {
+  color: #333;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -139,6 +173,60 @@ header .badges .badge {
   margin-bottom: 12px;
   -webkit-box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
           box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
+}
+
+.포트폴리오_공지사항 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #333;
+  border-right: 50px solid transparent;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.포트폴리오_공지사항:hover {
+  border-bottom: 80px solid #222;
+  border-right: 80px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.포트폴리오_공지사항_텍스트 {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.포트폴리오_공지사항_텍스트 p {
+  font-size: 0.95em;
+  margin: 0;
+}
+
+.포트폴리오_공지사항_텍스트 a {
+  font-size: 0.95em;
+  line-height: 1.6em;
+}
+
+.포트폴리오_공지사항_텍스트 .포트폴리오_공지사항_닫기버튼 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #df5b00;
+  cursor: pointer;
+}
+
+.포트폴리오_공지사항_텍스트 .포트폴리오_공지사항_닫기버튼:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 main .main_kv video {
@@ -240,6 +328,17 @@ main .about .card .back img {
   position: absolute;
   height: 80%;
   border-radius: 5px;
+}
+
+main .about .card:hover .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+main .about .card:hover .back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  z-index: 1;
 }
 
 main .movie {
@@ -354,6 +453,42 @@ main .exhibition .exhibition_contents .instructions .table .column .details_btn.
   width: 100%;
 }
 
+main .exhibition .exhibition_contents .instructions .table .전시전_주의사항 {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: rgba(34, 34, 34, 0.99);
+  z-index: 10;
+  border: 1px solid #2ef4f4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3em 1em 1em 1em;
+}
+
+main .exhibition .exhibition_contents .instructions .table .전시전_주의사항 h3 {
+  font-size: 30px;
+  font-weight: 900;
+  padding-bottom: 30px;
+}
+
+main .exhibition .exhibition_contents .instructions .table .전시전_주의사항 .전시전_주의사항_닫기버튼 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #df5b00;
+  cursor: pointer;
+}
+
+main .exhibition .exhibition_contents .instructions .table .전시전_주의사항 .전시전_주의사항_닫기버튼:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
 main .exhibition .exhibition_contents .maps {
   position: absolute;
   right: 0;
@@ -374,21 +509,6 @@ main .exhibition ul li {
 
 main .exhibition iframe {
   margin-top: 4rem;
-}
-
-main .exhibition .note {
-  margin-top: 4rem;
-  width: 100%;
-  border: 1px solid #2ef4f4;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 40px;
-}
-
-main .exhibition .note h3 {
-  font-size: 30px;
-  font-weight: 900;
-  padding-bottom: 30px;
 }
 
 main .sales {
