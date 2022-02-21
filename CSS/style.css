@@ -161,6 +161,7 @@ header .wrapper nav ul li a span {
 }
 
 header .badges {
+  display: none;
   position: absolute;
   top: 100px;
   right: 10px;
@@ -173,6 +174,55 @@ header .badges .badge {
   margin-bottom: 12px;
   -webkit-box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
           box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
+}
+
+header .badges_small {
+  display: none;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 15px 15px;
+  -webkit-filter: drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.6));
+          filter: drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.6));
+  border: 1px solid #2ef4f4;
+  border-right: 0;
+  border-radius: 10px 0 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .badges_small .badge_small {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 5px;
+  padding: 5px;
+}
+
+header .badges_small .badge_small span {
+  font-size: 40px;
 }
 
 .포트폴리오_공지사항 {
