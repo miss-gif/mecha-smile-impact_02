@@ -29,7 +29,7 @@ html a:hover {
   opacity: 0.6;
 }
 
-.flex {
+html .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,19 +37,19 @@ html a:hover {
       flex-wrap: wrap;
 }
 
-.inner {
+html .inner {
   position: relative;
   width: 65%;
   margin: 0 auto;
 }
 
-.youtube {
+html .youtube {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
 }
 
-.youtube iframe {
+html .youtube iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,7 +60,7 @@ html a:hover {
   border: 1px solid #2ef4f4;
 }
 
-.center {
+html .center {
   text-align: center;
 }
 
@@ -96,6 +96,7 @@ html a:hover {
 }
 
 .swiper-prev {
+  top: 1px;
   left: -50px;
 }
 
@@ -160,91 +161,44 @@ header .wrapper nav ul li a span {
   color: #50dcfd;
 }
 
-header .badges {
-  display: none;
-  position: absolute;
-  top: 100px;
-  right: 10px;
-  width: 12.5rem;
-}
-
-header .badges .badge {
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 12px;
-  -webkit-box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
-          box-shadow: 0 0 10px rgba(80, 221, 253, 0.363);
-}
-
-header .badges_small {
-  display: none;
+header .side_menu_bar {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  right: 0;
+  width: 48px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding: 15px 15px;
-  -webkit-filter: drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.6));
-          filter: drop-shadow(0px 3px 16px rgba(0, 0, 0, 0.6));
-  border: 1px solid #2ef4f4;
-  border-right: 0;
-  border-radius: 10px 0 0 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  right: 0;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  opacity: 0.6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-header .badges_small .badge_small {
-  width: 40px;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #000;
-  border-radius: 50%;
-  margin: 5px;
-  padding: 5px;
+header .side_menu_bar:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-header .badges_small .badge_small span {
-  font-size: 40px;
-}
-
-.포트폴리오_공지사항 {
+header .저작권안내 .포트폴리오_공지사항 {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 0;
-  height: 0;
   border-bottom: 50px solid #333;
   border-right: 50px solid transparent;
   cursor: pointer;
   opacity: 0.6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.포트폴리오_공지사항:hover {
+header .저작권안내 .포트폴리오_공지사항:hover {
   border-bottom: 80px solid #222;
   border-right: 80px solid transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.포트폴리오_공지사항_텍스트 {
+header .저작권안내 .포트폴리오_공지사항_텍스트 {
   display: none;
   position: fixed;
   left: 0;
@@ -255,17 +209,17 @@ header .badges_small .badge_small span {
   padding: 1em;
 }
 
-.포트폴리오_공지사항_텍스트 p {
+header .저작권안내 .포트폴리오_공지사항_텍스트 p {
   font-size: 0.95em;
   margin: 0;
 }
 
-.포트폴리오_공지사항_텍스트 a {
+header .저작권안내 .포트폴리오_공지사항_텍스트 a {
   font-size: 0.95em;
   line-height: 1.6em;
 }
 
-.포트폴리오_공지사항_텍스트 .포트폴리오_공지사항_닫기버튼 {
+header .저작권안내 .포트폴리오_공지사항_텍스트 .포트폴리오_공지사항_닫기버튼 {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -273,30 +227,49 @@ header .badges_small .badge_small span {
   cursor: pointer;
 }
 
-.포트폴리오_공지사항_텍스트 .포트폴리오_공지사항_닫기버튼:hover {
+header .저작권안내 .포트폴리오_공지사항_텍스트 .포트폴리오_공지사항_닫기버튼:hover {
   opacity: 0.6;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 
-#myBtn {
-  display: none;
+header .top버튼 {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
   font-size: 18px;
-  border: none;
+  border: 1px solid #2ef4f4;
   outline: none;
-  background-color: #2ef4f43b;
-  color: white;
-  cursor: pointer;
+  background-color: #000;
   padding: 15px;
-  border-radius: 4px;
+  border-radius: 5px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0.6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#myBtn:hover {
-  background-color: #555;
+header .top버튼:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main {
+  display: none;
 }
 
 main .main_kv video {
@@ -355,10 +328,10 @@ main .about ul li .text p {
 main .about ul li .text time {
   line-height: 2em;
   color: #2ef4f4;
-  font-size: 14px;
 }
 
 main .about .card {
+  background-color: #156;
   position: relative;
   -webkit-perspective: 600px;
           perspective: 600px;
@@ -641,6 +614,7 @@ main .othersite ul li {
 }
 
 footer {
+  display: none;
   font-size: 0.875em;
   padding: 1em;
 }

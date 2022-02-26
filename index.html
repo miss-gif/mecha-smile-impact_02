@@ -28,12 +28,13 @@
 
 <body>
   <header class="flex">
+    <!-- 상단 메뉴바 -->
     <div class="wrapper flex">
       <h1>
         <a href="#"><img src="./img/logo_mecasma.png" alt="logo" /></a>
       </h1>
       <nav>
-        <ul id="button" class="button flex">
+        <ul class="flex">
           <li>
             <a href="#about">메카스마 <span> About</span></a>
           </li>
@@ -61,52 +62,39 @@
       </nav>
       <!-- //nav -->
     </div>
-    <!-- //wrapper -->
+    <!-- 상단 메뉴바 닫힘 -->
 
-    <div class="badges">
-      <div class="badge">
-        <a href="javascript:void(0)"><img src="./img/badges/badges (1).webp" alt="Badge" /></a>
+    <!-- 사이드 메뉴바 -->
+    <div class="side_menu_bar">
+      <img src="./img/badges/bg_sns.png" alt="side_menu_bar">
+    </div>
+    <!-- 사이드 메뉴바 닫힘 -->
+
+    <!-- 포트폴리오 안내 -->
+    <div class="저작권안내">
+      <div class="포트폴리오_공지사항">
       </div>
-      <div class="badge">
-        <a href="javascript:void(0)"><img src="./img/badges/badges (2).jpg" alt="Badge" /></a>
-      </div>
-      <div class="badge">
-        <a href="javascript:void(0)"><img src="./img/badges/badges (1).jpg" alt="Badge" /></a>
+      <div class="포트폴리오_공지사항_텍스트">
+        <p>해당 페이지는 <br>상업적 목적이 아닌 <br>개인 포트폴리오 용도로 <br>제작되었습니다.</p>
+        <p>본 저작권은 <br>페이지 하단에서 <br>확인하실 수 있습니다.</p>
+        <a href="https://www.mechasmile.com/msi/">원본 출처 (링크)</a>
+        <div class="포트폴리오_공지사항_닫기버튼">
+          <span class="material-icons">
+            close
+          </span>
+        </div>
       </div>
     </div>
-    <!-- //BADGES -->
-<!-- 
-    <div class="badges_small ">
-      <div class="badge_small  "> <a href="javascript:void(0)"><img src="./img/badges/logo_mecasma.png" alt="Badge" /></a>
-      </div>
-      <div class="badge_small "> <a href="javascript:void(0)"><img src="./img/badges/sns_t.png" alt="Badge" /></a>
-      </div>
-      <div class="badge_small "> <a href="javascript:void(0)"><span class="material-icons">
-        edit_note
-        </span></a>
-      </div>
-    </div> -->
+    <!-- 포트폴리오 안내 닫힘 -->
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  
-  
-  
+    <!-- TOP 버튼 -->
+    <button onclick="topFunction()" id="top버튼" class="top버튼"><span class="material-icons">
+      north
+      </span></button>
+    <!-- TOP 버튼 닫힘 -->
+
   </header>
   <!-- //header -->
-
-  <div class="포트폴리오_공지사항">
-
-  </div>
-  <div class="포트폴리오_공지사항_텍스트">
-    <p>해당 페이지는 <br>상업적 목적이 아닌 <br>개인 포트폴리오 용도로 <br>제작되었습니다.</p>
-    <p>본 저작권은 <br>페이지 하단에서 <br>확인하실 수 있습니다.</p>
-    <a href="https://www.mechasmile.com/msi/">원본 출처 (링크)</a>
-    <div class="포트폴리오_공지사항_닫기버튼">
-      <span class="material-icons">
-        close
-      </span>
-    </div>
-  </div>
 
   <main>
     <section class="main_kv">
@@ -114,6 +102,7 @@
     </section>
     <!-- //title -->
 
+    <!-- 메카스마 about -->
     <div class="background__color__about">
       <div class="background__color__cover">
         <section id="about" class="about inner content">
@@ -131,6 +120,7 @@
           </p>
           <p class="">여러분, 충격(임팩트)에 대비해 주세요.</p>
 
+          <!-- 메카스마 about 카드 슬라이드 -->
           <div class="swiper-container">
             <ul class="swiper-wrapper">
               <li class="card swiper-slide">
@@ -144,8 +134,9 @@
                   <p>
                     MAX 와타나베 <br />
                     스페셜 메시지 도착!!
+                    <time>2021.12.24</time>
                   </p>
-                  <time>2021.12.24</time>
+
                 </div>
               </li>
               <li class="card swiper-slide">
