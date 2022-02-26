@@ -1,4 +1,9 @@
 @charset "UTF-8";
+#canvas {
+  position: fixed;
+  opacity: 0.3;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -268,13 +273,11 @@ header .top버튼:hover {
   transition: 0.5s;
 }
 
-main {
-  display: none;
-}
-
 main .main_kv video {
+  position: relative;
   width: 100%;
   top: 0;
+  z-index: 10;
 }
 
 main .about {

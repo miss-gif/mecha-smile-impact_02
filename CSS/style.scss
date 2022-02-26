@@ -2,6 +2,11 @@
 
 // COMMOM
 
+#canvas {
+  position: fixed;
+  opacity: 0.3;
+}
+
 html {
   scroll-behavior: smooth;
 
@@ -11,6 +16,7 @@ html {
     font-weight: 400;
     background-color: #000;
     color: #fff;
+    // overflow: hidden;
   }
 
   p {
@@ -215,6 +221,7 @@ header {
     opacity: 0.6;
     transition: 0.5s;
   }
+
   .side_menu_bar:hover {
     opacity: 1;
     transition: 0.5s;
@@ -306,12 +313,14 @@ header {
 
 // MAIN
 main {
-  display: none;
+  // display: none;
 
   .main_kv {
     video {
+      position: relative;
       width: 100%;
       top: 0;
+      z-index: 10;
     }
   }
 

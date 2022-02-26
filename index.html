@@ -24,9 +24,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <!-- JS -->
   <script defer src="./JS/main.js"></script>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js'></script>
+  <script defer src="./JS/script.js"></script>
 </head>
 
 <body>
+  <div id="canvas"></div>
   <header class="flex">
     <!-- 상단 메뉴바 -->
     <div class="wrapper flex">
@@ -89,7 +93,7 @@
 
     <!-- TOP 버튼 -->
     <button onclick="topFunction()" id="top버튼" class="top버튼"><span class="material-icons">
-      north
+        north
       </span></button>
     <!-- TOP 버튼 닫힘 -->
 
