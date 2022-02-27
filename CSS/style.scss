@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
-// COMMOM
+:root {
+  --메인색상: #50dcfd;
+}
 
+//배경이미지 효과
 #canvas {
   position: fixed;
   opacity: 0.3;
 }
+
+// COMMOM
 
 html {
   scroll-behavior: smooth;
@@ -69,65 +74,10 @@ html {
   }
 }
 
-// 배경이미지
-// main {
-//   .background__color__about {
-//     background-image: url("https://www.wallpapertip.com/wmimgs/4-45700_data-src-space-wallpaper-4k.jpg");
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     height: 150vh;
-//     // position: relative;
-//   }
-//   .background__color__movie {
-//     background-image: url("https://www.wallpapertip.com/wmimgs/8-88939_2560x1440-18-hd-space-wallpapers-4k-ultra-hd.jpg");
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     height: 150vh;
-//     // height: 150vh;
-//   }
-//   .background__color__live {
-//     background-image: url("https://www.wallpapertip.com/wmimgs/4-45493_v63696y-universe-wallpaper-desktop-desktop-background-universe.jpg");
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     height: 150vh;
-//   }
-//   .background__color__exhibition {
-//     background-image: url("https://www.wallpapertip.com/wmimgs/4-45493_v63696y-universe-wallpaper-desktop-desktop-background-universe.jpg");
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     height: 150vh;
-//   }
-//   .background__color__sales {
-//     background-image: url("https://www.wallpapertip.com/wmimgs/1-15787_download-free-hd-earth-from-space-desktop-wallpaper.png");
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     height: 150vh;
-//   }
-//   .background__color__gallery {
-//     background-image: url("https://www.wallpapertip.com/wmimgs/4-45700_data-src-space-wallpaper-4k.jpg");
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     height: 150vh;
-//   }
-
-//   .background__color__cover {
-//     width: 100%;
-//     // height: 150vh;
-//     position: absolute;
-//     background-color: rgba(0, 0, 0, 0.7);
-//     // z-index: 1;
-//   }
-// }
-
 // swiper
 .swiper-container {
   width: 100%;
+  padding: 0 0 30px 0;
   overflow: hidden;
   margin-top: 2em;
 
@@ -137,32 +87,50 @@ html {
   }
 }
 
+// 슬라이드 번호
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    background-color: #50dcfd;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 6px;
+    outline: none;
+  }
+  .swiper-pagination-bullet:last-child {
+    margin-right: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #50dcfd;
+  }
+}
+
 .swiper-prev,
 .swiper-next {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  color: #fff;
-  // bottom: 500px;
+  width: 3em;
+  height: 3em;
+  z-index: 1;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.4s;
+  background-color: #222;
 }
 
 .swiper-prev {
-  left: -50px;
+  left: 0;
 }
 
 .swiper-next {
-  right: -50px;
+  right: 0;
 }
 
 .swiper-prev:hover,
 .swiper-next:hover {
-  // background-color: #fff;
-  color: #333;
+  background-color: #333;
+  color: #fff;
 }
 
 // HEADER
@@ -414,14 +382,14 @@ main {
     }
 
     /// 카드 뒤집어 지는 옵션
-    .card:hover .front {
-      transform: rotateY(180deg);
-    }
+    // .card:hover .front {
+    //   transform: rotateY(180deg);
+    // }
 
-    .card:hover .back {
-      transform: rotateY(0deg);
-      z-index: 1;
-    }
+    // .card:hover .back {
+    //   transform: rotateY(0deg);
+    //   z-index: 1;
+    // }
   }
 
   .movie {

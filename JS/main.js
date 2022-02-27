@@ -5,6 +5,11 @@ new Swiper(".about .swiper-container", {
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerView: 5, // 한 번에 보여줄 슬라이드 개수
   // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  pagination: {
+    // 페이지 번호 사용 여부
+    el: ".about .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
   navigation: {
     // 슬라이드 이전/다음 버튼 사용 여부
     prevEl: ".about .swiper-prev", // 이전 버튼 선택자
@@ -19,6 +24,11 @@ new Swiper(".live .swiper-container", {
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerView: 1, // 한 번에 보여줄 슬라이드 개수
   // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  pagination: {
+    // 페이지 번호 사용 여부
+    el: ".live .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
   navigation: {
     // 슬라이드 이전/다음 버튼 사용 여부
     prevEl: ".live .swiper-prev", // 이전 버튼 선택자
@@ -33,6 +43,11 @@ new Swiper(".exhibition .swiper-container", {
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerView: 2, // 한 번에 보여줄 슬라이드 개수
   // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  pagination: {
+    // 페이지 번호 사용 여부
+    el: ".exhibition .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
   navigation: {
     // 슬라이드 이전/다음 버튼 사용 여부
     prevEl: ".exhibition .swiper-prev", // 이전 버튼 선택자
@@ -47,6 +62,11 @@ new Swiper(".sales .swiper-container", {
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
   // slidesPerGroup: 2, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  pagination: {
+    // 페이지 번호 사용 여부
+    el: ".sales .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
   navigation: {
     // 슬라이드 이전/다음 버튼 사용 여부
     prevEl: ".sales .swiper-prev", // 이전 버튼 선택자
@@ -61,6 +81,11 @@ new Swiper(".gallery .swiper-container", {
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
   slidesPerGroup: 3, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  pagination: {
+    // 페이지 번호 사용 여부
+    el: ".gallery .swiper-pagination", // 페이지 번호 요소 선택자
+    clickable: true, // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
   navigation: {
     // 슬라이드 이전/다음 버튼 사용 여부
     prevEl: ".gallery .swiper-prev", // 이전 버튼 선택자

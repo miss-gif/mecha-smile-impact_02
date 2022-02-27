@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+  --메인색상: #50dcfd;
+}
+
 #canvas {
   position: fixed;
   opacity: 0.3;
@@ -71,6 +75,7 @@ html .center {
 
 .swiper-container {
   width: 100%;
+  padding: 0 0 30px 0;
   overflow: hidden;
   margin-top: 2em;
 }
@@ -80,12 +85,28 @@ html .center {
   cursor: pointer;
 }
 
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #50dcfd;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 6px;
+  outline: none;
+}
+
+.swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #50dcfd;
+}
+
 .swiper-prev,
 .swiper-next {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  color: #fff;
+  width: 3em;
+  height: 3em;
+  z-index: 1;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,19 +119,21 @@ html .center {
           align-items: center;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  background-color: #222;
 }
 
 .swiper-prev {
-  left: -50px;
+  left: 0;
 }
 
 .swiper-next {
-  right: -50px;
+  right: 0;
 }
 
 .swiper-prev:hover,
 .swiper-next:hover {
-  color: #333;
+  background-color: #333;
+  color: #fff;
 }
 
 header {
@@ -389,17 +412,6 @@ main .about .card .back img {
   position: absolute;
   height: 80%;
   border-radius: 5px;
-}
-
-main .about .card:hover .front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-main .about .card:hover .back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-  z-index: 1;
 }
 
 main .movie {
