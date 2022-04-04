@@ -4,7 +4,7 @@ new Swiper(".about .swiper-container", {
   loop: true, // 반복 재생 여부
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerView: 5, // 한 번에 보여줄 슬라이드 개수
-  // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  slidesPerGroup: 1, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
   pagination: {
     // 페이지 번호 사용 여부
     el: ".about .swiper-pagination", // 페이지 번호 요소 선택자
@@ -61,7 +61,7 @@ new Swiper(".sales .swiper-container", {
   loop: true, // 반복 재생 여부
   spaceBetween: 30, // 슬라이드 사이 여백
   slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수
-  // slidesPerGroup: 2, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
+  slidesPerGroup: 3, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
   pagination: {
     // 페이지 번호 사용 여부
     el: ".sales .swiper-pagination", // 페이지 번호 요소 선택자
